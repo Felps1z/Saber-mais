@@ -1,4 +1,4 @@
-![Logo do Saber+](https://lh3.googleusercontent.com/pw/AP1GczM-3Y6InXjNvHFjwP_xdZcTq8bzyz-8L54-PbvmlQa-eyi2UGiGMKkLen6Y-oqIRsbYbpcTnn98tZnpfudUHwkjb6IfeoCTXPy6_BYgjm459Op8iqeR5_-PQOanTW_i-cjfBBL6aakybVkZTMMla0kd=w241-h128-s-no-gm?authuser=0)
+![Logo do Saber+](https://lh3.googleusercontent.com/pw/AP1GczNvuTcmAbfEZROwnNF4xh9nx6GUjV3HrcIR2bvhnQyW-j6S9WXIYUYv7beyXzZ0wTHshPtbt1YwE-1DSDaMZd469TtSMwkV9lrEcrcUYq72MmoYku_LDqEh1jnJt_rOl4xXAy72HLdwpdA1aWyVjo4p=w481-h256-s-no-gm?authuser=0)
 
 # Bem-vindo ao repositório do Saber+ Acadêmico
 
