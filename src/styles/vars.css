@@ -1,0 +1,12 @@
+:root {
+    --azul: #003C74;
+    --azul-escuro: #001A30;
+    /*--azul-claro: #003566;*/
+    --azul-claro: #004F98;
+    --bgcolor-input: #d9d9d920;
+    /*20% de transparencia*/
+    --bgcolor-icon-input: #002340c1;
+    /*80% de transparencia*/
+    --white: #fff;
+    --black: #000;
+}

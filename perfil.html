@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Saber+</title>
+    <link rel="stylesheet" href="src/styles/vars.css">
+    <link rel="stylesheet" href="./src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/media-query.css">
+    <!-- Biblioteca de icones do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <style>
+
+    </style>
+</head>
+
+
+<body>
+    <main id="main-p">
+        <div class="left-container">
+            <div id="arrow-p">
+                <a href="home.html">
+                    <i class="fa-solid fa-circle-left" style="color: #ffffff;"></i>
+                </a>
+            </div>
+            <img src="./src/assets/img/logo_larga_redimensionada.png" alt="Logo saber+" title="Logo e simbolo Saber+"
+                id="img-logo">
+            <img src="./src/assets/img/img_padrao_p.png" alt="" title="" id="img-user">
+            <label class="addImg" for="pictureInput">
+                <span>Adicionar imagem</span>
+            </label>
+            <input type="file" name="pictureInput" id="pictureInput">
+            <div class="name-box">
+                <p class="nome">
+                </p>
+            </div>
+            <div class="account-type-box">
+                <span style="text-transform: uppercase;">
+                    <p id="perfil">
+                    </p>
+                </span>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="title-box">
+                <h1>DADOS PESSOAIS</h1>
+            </div>
+
+            <div class="dadosBox">
+                <div class="nameBox">
+                    <p>Nome</p>
+                </div>
+                <div class="containerBox">
+                    <div class="imgBox"><img src="./src/assets/icons/icon-name.svg" alt=""></div>
+                    <div class="textBox">
+                        <p class="nome">
+                        </p>
+                    </div>
+                    <p class="tooltip" onclick="editarNome()" tabindex="0">Editar</p>
+                </div>
+            </div>
+            <div class="dadosBox">
+                <div class="nameBox">
+                    <p>Matrícula</p>
+                </div>
+                <div class="containerBox">
+                    <div class="imgBox"><img src="./src/assets/icons/icon-matricula.svg" alt=""></div>
+                    <div class="textBox">
+                        <p id="matricula">
+                        </p>
+                        <p class="tooltip" onclick="editarMat()">Editar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dadosBox">
+                <div class="nameBox">
+                    <p>Email</p>
+                </div>
+                <div class="containerBox">
+                    <div class="imgBox"><img src="./src/assets/icons/icon-email.svg" alt=""></div>
+                    <div class="textBox">
+                        <p id="email">
+                        </p>
+                    </div>
+                    <p class="tooltip" onclick="editarEmail()">Editar</p>
+                </div>
+            </div>
+            <div class="dadosBox">
+                <div class="nameBox">
+                    <p>Telefone</p>
+                </div>
+                <div class="containerBox">
+                    <div class="imgBox"><img src="./src/assets/icons/icon-telefone.svg" alt=""></div>
+                    <div class="textBox">
+                        <p id="telefone">
+                        </p>
+                    </div>
+                    <p class="tooltip" onclick="editarTel()">Editar</p>
+                </div>
+            </div>
+            <div class="dadosBox">
+                <div class="nameBox">
+                    <p>Senha</p>
+                </div>
+                <div class="containerBox">
+                    <div class="imgBox"><img src="./src/assets/icons/icon-senha.svg" alt=""></div>
+                    <div class="textBox">
+                        <p id="senha">
+                        </p>
+                        <p class="tooltip" onclick="editarSenha()">Editar</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="./perfil.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
+    <script>
+        document.getElementById('perfil').innerHTML = showInfo('perfil', 'perfil');
+        document.getElementsByClassName('nome')[0].innerHTML = showInfo('nome', 'nome');
+        document.getElementsByClassName('nome')[1].innerHTML = showInfo('nome', 'nome');
+        document.getElementById('matricula').innerHTML = showInfo('matricula', 'matricula');
+        document.getElementById('email').innerHTML = showInfo('email', 'email');
+        document.getElementById('telefone').innerHTML = showInfo('telefone', 'telefone');
+        document.getElementById('senha').innerHTML = hidePassword(showInfo('senha', 'senha'));
+
+        async function editarNome() {
+            let { value: novoNome } = await Swal.fire({
+                input: "text",
+                icon:"info",
+                title: 'Atualizar dados',
+                inputPlaceholder: "Novo nome",
+                showCancelButton: true,
+                cancelButtonText: "Cancelar",
+                confirmButtonText: 'Atualizar',
+                customClass: {
+                    confirmButton: 'confirm-button',
+                }
+            });
+            if (novoNome) {
+                localStorage.setItem('nome', novoNome);
+                document.getElementsByClassName('nome')[0].textContent = novoNome;
+                document.getElementsByClassName('nome')[1].textContent = novoNome;
+            }
+        }
+        async function editarEmail() {
+            let { value: novoEmail } = await Swal.fire({
+                input: "email",
+                icon:"info",
+                title: 'Atualizar dados',
+                inputPlaceholder: "Novo e-mail",
+                showCancelButton: true,
+                cancelButtonText: "Cancelar",
+                confirmButtonText: 'Atualizar',
+                customClass: {
+                    confirmButton: 'confirm-button',
+                }
+            });
+            if (novoEmail) {
+                localStorage.setItem('email', novoEmail);
+                document.getElementById('email').textContent = novoEmail;
+            }
+        }
+        async function editarTel() {
+            let { value: novoTel } = await Swal.fire({
+                input: "text",
+                title: 'Atualizar dados',
+                inputPlaceholder: "Novo número",
+                showCancelButton: true,
+                icon:"info",
+                cancelButtonText: "Cancelar",
+                confirmButtonText: 'Atualizar',
+                customClass: {
+                    confirmButton: 'confirm-button',
+                },
+                inputValidator: (value) => {
+                    const phoneRegex = /^[0-9]{8,}$/;
+                    if (!phoneRegex.test(value)) {
+                        return 'Por favor, insira um número de telefone válido.';
+                    }
+                }
+            });
+
+            if (novoTel) {
+                localStorage.setItem('telefone', novoTel);
+                document.getElementById('telefone').textContent = novoTel;
+            }
+        }
+        function editarMat() {
+            Swal.fire({
+                title: 'Erro!',
+                text: 'Impossível editar matrícula',
+                icon: 'error',
+                icon:"warning",
+                customClass: {
+                    confirmButton: 'confirm-button',
+                },
+                confirmButtonText: 'Ok!'
+            })
+        }
+        async function editarSenha() {
+            let { value: senhaAntiga } = await Swal.fire({
+                input: "password",
+                title: 'Digite sua senha antiga',
+                inputPlaceholder: "Senha antiga",
+                icon:'info',
+                showCancelButton: true,
+                cancelButtonText: "Cancelar",
+                confirmButtonText: 'Verificar',
+                customClass: {
+                    confirmButton: 'confirm-button',
+                },
+            });
+
+            if (senhaAntiga == localStorage.getItem('senha')) {
+                let { value: novaSenha } = await Swal.fire({
+                    input: "password",
+                    title: 'Atualizar dados',
+                    inputPlaceholder: "Nova senha",
+                    showCancelButton: true,
+                    cancelButtonText: "Cancelar",
+                    confirmButtonText: 'Atualizar',
+                    customClass: {
+                        confirmButton: 'confirm-button',
+                    },
+                });
+
+                if (novaSenha) {
+                    localStorage.setItem('senha', novaSenha);
+                    document.getElementById('senha').textContent = hidePassword(novaSenha);
+                }
+            } else if (senhaAntiga) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erro',
+                    text: 'Senha antiga incorreta',
+                    confirmButtonText: 'OK',
+                    customClass: {
+                        confirmButton: 'confirm-button',
+                    },
+                });
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
