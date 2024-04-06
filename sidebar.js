@@ -1,5 +1,5 @@
 function checked(event) {
-    var elementoClicado = event.currentTarget;
+    let elementoClicado = event.currentTarget;
     let liElements = document.querySelectorAll('ul li');
     let iElements = document.querySelectorAll('ul li i');
 
@@ -20,127 +20,139 @@ function checked(event) {
     elementoClicado.style.color = 'white';
     elementoClicado.classList.add('elemento-clicado');
 
-     // -> BOTÔES SIDEBAR
+    // -> BOTÔES SIDEBAR
 
-     const dashboardSection1 = document.querySelector('main section:nth-of-type(1)');
-     const dashboardSection2 = document.querySelector('main section:nth-of-type(2)');
-     const boletimSection = document.querySelector('main section:nth-of-type(3)');
-     const calendarioSection = document.querySelector('main section:nth-of-type(4)');
-     const diarioSection = document.querySelector('main section:nth-of-type(5)');
-     const curriculoSection = document.querySelector('main section:nth-of-type(6)');
-     const estagioSection = document.querySelector('main section:nth-of-type(7)');
-     const mensagemSection = document.querySelector('main section:nth-of-type(8)');
-     const faqSection = document.querySelector('main section:nth-of-type(9)');
-     const main = document.querySelector('main');
-     
-     function hiddenElement(element) {
-         element.style.display = 'none';
-     }
-     
-     function showElement(element) {
-         element.style.display = 'inherit';
-     }
-     
-     if (elementoClicado == liElements[2]){
-         main.style.gridTemplateColumns = '20% 40% 40%';
-         showElement(dashboardSection1);
-         showElement(dashboardSection2);
-         hiddenElement(boletimSection);
-         hiddenElement(calendarioSection);
-         hiddenElement(diarioSection);
-         hiddenElement(curriculoSection);
-         hiddenElement(estagioSection);
-         hiddenElement(mensagemSection);
-         hiddenElement(faqSection);
-     }
-     
-     if (elementoClicado == liElements[3]) {
-         main.style.gridTemplateColumns = '20% 80%';
-         hiddenElement(dashboardSection1);
-         hiddenElement(dashboardSection2);
-         hiddenElement(calendarioSection);
-         hiddenElement(curriculoSection);
-         hiddenElement(diarioSection);
-         hiddenElement(estagioSection);
-         hiddenElement(mensagemSection);
-         hiddenElement(faqSection);
-         boletimSection.style.display = 'flex';
-     }
-     if (elementoClicado == liElements[4]) {
-        main.style.gridTemplateColumns = '20% 80%';
-        hiddenElement(dashboardSection1);
-        hiddenElement(dashboardSection2);
-        hiddenElement(boletimSection);
-        hiddenElement(diarioSection);
-        hiddenElement(curriculoSection);
-        hiddenElement(estagioSection);
-        hiddenElement(faqSection);
-        calendarioSection.style.display = 'flex';
+    const page1Section1 = document.querySelector('main section:nth-of-type(1)');
+    const page1Section2 = document.querySelector('main section:nth-of-type(2)');
+    const page2 = document.querySelector('main section:nth-of-type(3)');
+    const page3 = document.querySelector('main section:nth-of-type(4)');
+    const page4 = document.querySelector('main section:nth-of-type(5)');
+    const page5 = document.querySelector('main section:nth-of-type(6)');
+    const page6 = document.querySelector('main section:nth-of-type(7)');
+    const page7 = document.querySelector('main section:nth-of-type(8)');
+    const page8 = document.querySelector('main section:nth-of-type(9)');
+    const main = document.querySelector('main');
+
+    function change() {
+        return {
+            hiddenElement(element) {
+                element.style.display = 'none';
+            },
+        
+            showElement(element) {
+                element.style.display = 'inherit';
+            },
+
+            btn1() {
+                main.style.gridTemplateColumns = '20% 40% 40%';
+                this.showElement(page1Section1);
+                this.showElement(page1Section2);
+                this.hiddenElement(page2);
+                this.hiddenElement(page3);
+                this.hiddenElement(page4);
+                this.hiddenElement(page5);
+                this.hiddenElement(page6);
+                this.hiddenElement(page7);
+                this.hiddenElement(page8);
+            },
+            btn2() {
+                main.style.gridTemplateColumns = '20% 80%';
+                this.hiddenElement(page1Section1);
+                this.hiddenElement(page1Section2);
+                this.hiddenElement(page3);
+                this.hiddenElement(page5);
+                this.hiddenElement(page4);
+                this.hiddenElement(page6);
+                this.hiddenElement(page7);
+                this.hiddenElement(page8);
+                page2.style.display = 'flex';
+            },
+            btn3() {
+                main.style.gridTemplateColumns = '20% 80%';
+                this.hiddenElement(page1Section1);
+                this.hiddenElement(page1Section2);
+                this.hiddenElement(page2);
+                this.hiddenElement(page4);
+                this.hiddenElement(page5);
+                this.hiddenElement(page6);
+                this.hiddenElement(page8);
+                page3.style.display = 'flex';
+            },
+            btn4() {
+                main.style.gridTemplateColumns = '20% 80%';
+                this.hiddenElement(page1Section1);
+                this.hiddenElement(page1Section2);
+                this.hiddenElement(page2);
+                this.hiddenElement(page3);
+                this.hiddenElement(page5);
+                this.hiddenElement(page6);
+                this.hiddenElement(page7);
+                this.hiddenElement(page8);
+                page4.style.display = 'flex';
+            },
+            btn5() {
+                main.style.gridTemplateColumns = '20% 80%';
+                this.hiddenElement(page1Section1);
+                this.hiddenElement(page1Section2);
+                this.hiddenElement(page2);
+                this.hiddenElement(page3);
+                this.hiddenElement(page4);
+                this.hiddenElement(page6);
+                this.hiddenElement(page7);
+                this.hiddenElement(page8);
+                page5.style.display = 'flex';
+            },
+            btn6() {
+                main.style.gridTemplateColumns = '20% 80%';
+                this.hiddenElement(page1Section1);
+                this.hiddenElement(page1Section2);
+                this.hiddenElement(page2);
+                this.hiddenElement(page3);
+                this.hiddenElement(page4);
+                this.hiddenElement(page5);
+                this.hiddenElement(page7);
+                this.hiddenElement(page8);
+                page6.style.display = 'flex';
+            },
+            btn7() {
+                main.style.gridTemplateColumns = '20% 80%';
+                this.hiddenElement(page1Section1);
+                this.hiddenElement(page1Section2);
+                this.hiddenElement(page2);
+                this.hiddenElement(page3);
+                this.hiddenElement(page4);
+                this.hiddenElement(page6);
+                this.hiddenElement(page5);
+                this.hiddenElement(page8);
+                page7.style.display = 'flex';
+            },
+            btn8() {
+                main.style.gridTemplateColumns = '20% 80%';
+                this.hiddenElement(page1Section1);
+                this.hiddenElement(page1Section2);
+                this.hiddenElement(page2);
+                this.hiddenElement(page3);
+                this.hiddenElement(page4);
+                this.hiddenElement(page6);
+                this.hiddenElement(page5);
+                this.hiddenElement(page7);
+                page8.style.display = 'flex';
+            }
+        }
     }
-    if (elementoClicado == liElements[5]) {
-        main.style.gridTemplateColumns = '20% 80%';
-        hiddenElement(dashboardSection1);
-        hiddenElement(dashboardSection2);
-        hiddenElement(boletimSection);
-        hiddenElement(calendarioSection);
-        hiddenElement(curriculoSection);
-        hiddenElement(estagioSection);
-        hiddenElement(mensagemSection);
-        hiddenElement(faqSection);
-        diarioSection.style.display = 'flex';
-    }
-    if (elementoClicado == liElements[6]) {
-        main.style.gridTemplateColumns = '20% 80%';
-        hiddenElement(dashboardSection1);
-        hiddenElement(dashboardSection2);
-        hiddenElement(boletimSection);
-        hiddenElement(calendarioSection);
-        hiddenElement(diarioSection);
-        hiddenElement(estagioSection);
-        hiddenElement(mensagemSection);
-        hiddenElement(faqSection);
-        curriculoSection.style.display = 'flex';
-    }
-    if (elementoClicado == liElements[7]) {
-        main.style.gridTemplateColumns = '20% 80%';
-        hiddenElement(dashboardSection1);
-        hiddenElement(dashboardSection2);
-        hiddenElement(boletimSection);
-        hiddenElement(calendarioSection);
-        hiddenElement(diarioSection);
-        hiddenElement(curriculoSection);
-        hiddenElement(mensagemSection);
-        hiddenElement(faqSection);
-        estagioSection.style.display = 'flex';
-    }
-    if (elementoClicado == liElements[8]) {
-        main.style.gridTemplateColumns = '20% 80%';
-        hiddenElement(dashboardSection1);
-        hiddenElement(dashboardSection2);
-        hiddenElement(boletimSection);
-        hiddenElement(calendarioSection);
-        hiddenElement(diarioSection);
-        hiddenElement(estagioSection);
-        hiddenElement(curriculoSection);
-        hiddenElement(faqSection);
-        mensagemSection.style.display = 'flex';
-    }
-    if (elementoClicado == liElements[9]) {
-        main.style.gridTemplateColumns = '20% 80%';
-        hiddenElement(dashboardSection1);
-        hiddenElement(dashboardSection2);
-        hiddenElement(boletimSection);
-        hiddenElement(calendarioSection);
-        hiddenElement(diarioSection);
-        hiddenElement(estagioSection);
-        hiddenElement(curriculoSection);
-        hiddenElement(mensagemSection);
-        faqSection.style.display = 'flex';
-    }
+
+    const changes = change(); 
+
+    if (elementoClicado == liElements[2]) changes.btn1();
+    if (elementoClicado == liElements[3]) changes.btn2();
+    if (elementoClicado == liElements[4]) changes.btn3();
+    if (elementoClicado == liElements[5]) changes.btn4();
+    if (elementoClicado == liElements[6]) changes.btn5();
+    if (elementoClicado == liElements[7]) changes.btn6();
+    if (elementoClicado == liElements[8]) changes.btn7();
+    if (elementoClicado == liElements[9]) changes.btn8();
+
+    let idNumber = elementoClicado.id.replace('li', '');
     
-    // Definir a cor branca apenas para o i associado à li clicada
-    // primeiro separa apenas o numero do id de li(li1,li2...) que foi clicado e coloca em uma variável
-    let idNumber = elementoClicado.id.replace('li', ''); //removendo o "li" dos ids, deixando apenas os números
-    // Pegando o icone(i) correspondente ao li, pois os numeros nos ids de li e i são iguais e mudando cor de texto.
     document.getElementById('i' + idNumber).style.color = '#ffffff';
 }
