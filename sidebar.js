@@ -143,14 +143,16 @@ function checked(event) {
 
     const changes = change(); 
 
-    if (elementoClicado == liElements[2]) changes.btn1();
-    if (elementoClicado == liElements[3]) changes.btn2();
-    if (elementoClicado == liElements[4]) changes.btn3();
-    if (elementoClicado == liElements[5]) changes.btn4();
-    if (elementoClicado == liElements[6]) changes.btn5();
-    if (elementoClicado == liElements[7]) changes.btn6();
-    if (elementoClicado == liElements[8]) changes.btn7();
-    if (elementoClicado == liElements[9]) changes.btn8();
+    switch (elementoClicado) {
+        case liElements[2]: changes.btn1(); break;
+        case liElements[3]: changes.btn2(); break;
+        case liElements[4]: changes.btn3(); break;
+        case liElements[5]: changes.btn4(); break;
+        case liElements[6]: changes.btn5(); break;
+        case liElements[7]: changes.btn6(); break;
+        case liElements[8]: changes.btn7(); break;
+        case liElements[9]: changes.btn8(); break;
+    }
 
     let idNumber = elementoClicado.id.replace('li', '');
     
