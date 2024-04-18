@@ -1,5 +1,5 @@
 
-// -> MENSAGEM DE BOM DIA <-
+// -> MENSAGEM DE BOM DIA
 const div = document.querySelector('#greetings');
 
 const date = new Date();
@@ -19,7 +19,7 @@ div.innerHTML += `, ${primeiroNome}`;
 
 
 
-// -> ABRIR MENU DO PERFIL <-
+// -> ABRIR MENU DO PERFIL
 function toggleMenu() {
     const options = document.querySelector('#options');
     options.classList.toggle('menuTranslateX');
@@ -33,38 +33,44 @@ function toggleMenu() {
     }
 }
 
-//Responsividade
-
-
-    var logo = document.querySelector('#logo img');
-
-    if (window.innerWidth < 480){
-        
-    } 
-
-// -> SLIDER (CARROSSEL) <-
+// -> SLIDER (CARROSSEL)
 const box = document.querySelector('.slides');
 const images = document.querySelectorAll('.slides img');
 
 let count = 0;
 
+/*Rolagem automática*/
 function slider() {
     count++;
     if (count > images.length - 1) {
         count = 0;
     }
 
-    box.style.transform = `translateX(${-count * 72}rem)`;
+    if (window.innerWidth >= 1920){
+        box.style.transform = `translateX(${-count * 57}rem)`;
+    } else{
+        box.style.transform = `translateX(${-count * 34}rem)`;
+    }
 }
 
+/*Botão Voltar*/
 function sliderBack(){
     count--;
-    box.style.transform = `translateX(${-count * 72}rem)`;
+    if (window.innerWidth >= 1920){
+        box.style.transform = `translateX(${-count * 57}rem)`;
+    } else{
+        box.style.transform = `translateX(${-count * 34}rem)`;
+    }
 }
 
+/*Botão Avançar*/
 function sliderAdvance(){
     count++
-    box.style.transform = `translateX(${-count * 72}rem)`;
+    if (window.innerWidth >= 1920){
+        box.style.transform = `translateX(${-count * 57}rem)`;
+    } else{
+        box.style.transform = `translateX(${-count * 34}rem)`;
+    }
 }
 
 document.querySelector('.slider .icon-voltar').addEventListener('click', (event) => {
