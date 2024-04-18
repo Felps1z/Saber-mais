@@ -54,17 +54,17 @@ function slider() {
         count = 0;
     }
 
-    box.style.transform = `translateX(${-count * 30.55}rem)`;
+    box.style.transform = `translateX(${-count * 72}rem)`;
 }
 
 function sliderBack(){
     count--;
-    box.style.transform = `translateX(${-count * 30.55}rem)`;
+    box.style.transform = `translateX(${-count * 72}rem)`;
 }
 
 function sliderAdvance(){
     count++
-    box.style.transform = `translateX(${-count * 30.55}rem)`;
+    box.style.transform = `translateX(${-count * 72}rem)`;
 }
 
 document.querySelector('.slider .icon-voltar').addEventListener('click', (event) => {

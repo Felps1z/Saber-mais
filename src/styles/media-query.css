@@ -1,22 +1,80 @@
-@media screen and (max-width: 480px) {
-    aside{
-        display: none;
-    
-    }
+@media screen and (max-width: 1366px) {
+    .right-container {}
+}
 
-    #date-container{
-        display: none;
-    }
-
-    main{
-        grid-template-columns: initial;
+@media screen and (max-width: 1921px) {
+    main {
+        height: 90vh;
+        padding: 2rem 1rem 3rem 2rem;
     }
 
     header{
-        justify-content: center;
+        padding: 2rem 0 2rem 1.5rem;
     }
 
-    #logo img{
-        height: 2.5rem;
+    .slides img {
+        width: initial;
+        height: 72.5vh;
+    }
+
+    aside ul {
+        margin-right: 2rem;
+        gap: 1rem;
+    }
+
+    aside ul li {
+        display: flex;
+        padding: 0 0 0 32px;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 900;
+        border-radius: 25px;
+    }
+
+    #greetings {
+        font-size: 3rem;
+    }
+
+    #news {
+        padding: 1rem 1.5rem;
+    }
+
+    #news h2 {
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    #news p {
+        padding: 8px 0;
+    }
+
+    #date-container #date span:nth-child(1) {
+        font-size: 3rem;
+    }
+    
+    #date-container #date span:nth-child(2) {
+        font-size: 7rem;
+        margin: 6px 0;
+        font-weight: 900;
+    }
+    
+    #date-container #date span:nth-child(3) {
+        font-size: 3rem;
+    }
+
+    #events{
+        margin-top: 2rem;
+    }
+
+    #date-container{
+        margin-bottom: 2rem;
+    }
+
+    #date-container #hour #clock{
+        transform: scale(1.5);
+    }
+
+    #date-container #hour{
+        justify-content: center;
     }
 }
