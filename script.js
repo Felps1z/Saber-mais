@@ -33,6 +33,15 @@ function toggleMenu() {
     }
 }
 
+//Responsividade
+
+
+    var logo = document.querySelector('#logo img');
+
+    if (window.innerWidth < 480){
+        
+    } 
+
 // -> SLIDER (CARROSSEL) <-
 const box = document.querySelector('.slides');
 const images = document.querySelectorAll('.slides img');

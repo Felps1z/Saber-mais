@@ -1,5 +1,22 @@
-@media screen and (max-width: 1366px) {
-    .right-container{
-       
+@media screen and (max-width: 480px) {
+    aside{
+        display: none;
+    
+    }
+
+    #date-container{
+        display: none;
+    }
+
+    main{
+        grid-template-columns: initial;
+    }
+
+    header{
+        justify-content: center;
+    }
+
+    #logo img{
+        height: 2.5rem;
     }
 }
