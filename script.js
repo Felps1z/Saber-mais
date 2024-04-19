@@ -1,3 +1,54 @@
+const btnBack = document.querySelector('.btn-back');
+
+btnBack.addEventListener('click', () => {
+
+    function hiddenElement(element) {
+        element.style.display = 'none';
+    }
+
+    function showElement(element) {
+        element.style.display = 'inherit';
+    }
+
+    //Mobile
+    function verifyMobile(grid) {
+        if (window.innerWidth < 480) return this.hiddenElement(aside);
+        if (window.innerWidth >= 480) return main.style.gridTemplateColumns = grid;
+    }
+
+    const page1Section1 = document.querySelector('main section:nth-of-type(1)');
+    const page1Section2 = document.querySelector('main section:nth-of-type(2)');
+    const page2 = document.querySelector('main section:nth-of-type(3)');
+    const page3 = document.querySelector('main section:nth-of-type(4)');
+    const page4 = document.querySelector('main section:nth-of-type(5)');
+    const page5 = document.querySelector('main section:nth-of-type(6)');
+    const page6 = document.querySelector('main section:nth-of-type(7)');
+    const page7 = document.querySelector('main section:nth-of-type(8)');
+    const page8 = document.querySelector('main section:nth-of-type(9)');
+    const main = document.querySelector('main');
+    
+    const aside = document.querySelector('aside')
+  
+    btnBack.style.display = 'none' 
+    showElement(aside)
+    hiddenElement(page1Section1);
+    hiddenElement(page1Section2);
+    hiddenElement(page2);
+    hiddenElement(page3);
+    hiddenElement(page4);
+    hiddenElement(page5);
+    hiddenElement(page6);
+    hiddenElement(page7);
+    hiddenElement(page8);
+
+
+    
+})
+
+if (window.innerWidth < 480){
+    const logo = document.querySelector('#logo img')
+    logo.setAttribute('src', 'src/assets/icons/icone_logo.png')
+}
 
 // -> MENSAGEM DE BOM DIA
 const div = document.querySelector('#greetings');
@@ -16,8 +67,6 @@ const partesNome = nome.split(" ");
 const primeiroNome = partesNome[0] 
 div.innerHTML = message(hour);
 div.innerHTML += `, ${primeiroNome}`;
-
-
 
 // -> ABRIR MENU DO PERFIL
 function toggleMenu() {

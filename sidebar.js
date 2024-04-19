@@ -32,19 +32,32 @@ function checked(event) {
     const page7 = document.querySelector('main section:nth-of-type(8)');
     const page8 = document.querySelector('main section:nth-of-type(9)');
     const main = document.querySelector('main');
+    const btnBack = document.querySelector('.btn-back');
+    const aside = document.querySelector('aside')
 
     function change() {
         return {
             hiddenElement(element) {
                 element.style.display = 'none';
             },
-        
+
             showElement(element) {
                 element.style.display = 'inherit';
             },
 
+            //Mobile
+            verifyMobile(grid) {
+                if (window.innerWidth < 480) {
+                    btnBack.style.display = 'block';
+                    this.hiddenElement(aside)
+                } else {
+                    return main.style.gridTemplateColumns = grid;
+                }
+            },
+
+            //Buttons
             btn1() {
-                main.style.gridTemplateColumns = '20% 40% 40%';
+                this.verifyMobile('20% 40% 40%');
                 this.showElement(page1Section1);
                 this.showElement(page1Section2);
                 this.hiddenElement(page2);
@@ -56,7 +69,7 @@ function checked(event) {
                 this.hiddenElement(page8);
             },
             btn2() {
-                main.style.gridTemplateColumns = '20% 80%';
+                this.verifyMobile('20% 80%');
                 this.hiddenElement(page1Section1);
                 this.hiddenElement(page1Section2);
                 this.hiddenElement(page3);
@@ -65,10 +78,11 @@ function checked(event) {
                 this.hiddenElement(page6);
                 this.hiddenElement(page7);
                 this.hiddenElement(page8);
+                btnBack.style.display = 'block';
                 page2.style.display = 'flex';
             },
             btn3() {
-                main.style.gridTemplateColumns = '20% 80%';
+                this.verifyMobile('20% 80%');
                 this.hiddenElement(page1Section1);
                 this.hiddenElement(page1Section2);
                 this.hiddenElement(page2);
@@ -76,10 +90,11 @@ function checked(event) {
                 this.hiddenElement(page5);
                 this.hiddenElement(page6);
                 this.hiddenElement(page8);
+                btnBack.style.display = 'block';
                 page3.style.display = 'flex';
             },
             btn4() {
-                main.style.gridTemplateColumns = '20% 80%';
+                this.verifyMobile('20% 80%');
                 this.hiddenElement(page1Section1);
                 this.hiddenElement(page1Section2);
                 this.hiddenElement(page2);
@@ -88,10 +103,11 @@ function checked(event) {
                 this.hiddenElement(page6);
                 this.hiddenElement(page7);
                 this.hiddenElement(page8);
+                btnBack.style.display = 'block';
                 page4.style.display = 'flex';
             },
             btn5() {
-                main.style.gridTemplateColumns = '20% 80%';
+                this.verifyMobile('20% 80%');
                 this.hiddenElement(page1Section1);
                 this.hiddenElement(page1Section2);
                 this.hiddenElement(page2);
@@ -100,10 +116,11 @@ function checked(event) {
                 this.hiddenElement(page6);
                 this.hiddenElement(page7);
                 this.hiddenElement(page8);
+                btnBack.style.display = 'block';
                 page5.style.display = 'flex';
             },
             btn6() {
-                main.style.gridTemplateColumns = '20% 80%';
+                this.verifyMobile('20% 80%');
                 this.hiddenElement(page1Section1);
                 this.hiddenElement(page1Section2);
                 this.hiddenElement(page2);
@@ -112,10 +129,11 @@ function checked(event) {
                 this.hiddenElement(page5);
                 this.hiddenElement(page7);
                 this.hiddenElement(page8);
+                btnBack.style.display = 'block';
                 page6.style.display = 'flex';
             },
             btn7() {
-                main.style.gridTemplateColumns = '20% 80%';
+                this.verifyMobile('20% 80%');
                 this.hiddenElement(page1Section1);
                 this.hiddenElement(page1Section2);
                 this.hiddenElement(page2);
@@ -124,10 +142,11 @@ function checked(event) {
                 this.hiddenElement(page6);
                 this.hiddenElement(page5);
                 this.hiddenElement(page8);
+                btnBack.style.display = 'block';
                 page7.style.display = 'flex';
             },
             btn8() {
-                main.style.gridTemplateColumns = '20% 80%';
+                this.verifyMobile('20% 80%');
                 this.hiddenElement(page1Section1);
                 this.hiddenElement(page1Section2);
                 this.hiddenElement(page2);
@@ -136,12 +155,13 @@ function checked(event) {
                 this.hiddenElement(page6);
                 this.hiddenElement(page5);
                 this.hiddenElement(page7);
+                btnBack.style.display = 'block';
                 page8.style.display = 'flex';
             }
         }
     }
 
-    const changes = change(); 
+    const changes = change();
 
     switch (elementoClicado) {
         case liElements[2]: changes.btn1(); break;
@@ -154,7 +174,21 @@ function checked(event) {
         case liElements[9]: changes.btn8(); break;
     }
 
+    if (elementoClicado == btnBack) {
+        btnBack.style.display = 'none'
+        changes.showElement(aside)
+        changes.hiddenElement(page1Section1);
+        changes.hiddenElement(page1Section2);
+        changes.hiddenElement(page2);
+        changes.hiddenElement(page3);
+        changes.hiddenElement(page4);
+        changes.hiddenElement(page5);
+        changes.hiddenElement(page6);
+        changes.hiddenElement(page7);
+        changes.hiddenElement(page8);
+    }
+
     let idNumber = elementoClicado.id.replace('li', '');
-    
+
     document.getElementById('i' + idNumber).style.color = '#ffffff';
 }
