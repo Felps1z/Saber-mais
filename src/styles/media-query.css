@@ -1,6 +1,6 @@
 /* Celular */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
     /* index */
 
     #main {
@@ -40,7 +40,7 @@
 
     .input-box input,
     button {
-        padding: 1rem;
+        padding: 0.8rem;
         width: 15rem;
     }
 
@@ -64,7 +64,7 @@
         font-size: 15px;
     }
 
-    /* RECUPERAR SENHA E CADASTRO */
+    /* tela de recuperar senha */
     .logo img {
         margin: 0.8rem 0.5rem;
         width: 4rem;
@@ -98,9 +98,26 @@
     .botao {
         margin-top: 0.5rem;
     }
+    /* tela de cadastro */
 
-
+    .titulo h2 {
+        text-align: center;
+        padding: 0.5rem;
+        background-color: var(--bgcolor-icon-input);
+        border-radius: 10px;
+        box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
+        width: 15rem;
+        margin-top: 3rem;
+        font-size: 15px;
+    }
+    .estilo-form {
+        gap: 0.5rem;
+    }
     
+    .radio-button-container {
+        gap: 14px;
+    }
+
 
     /* ---- */
     main {
@@ -113,7 +130,7 @@
     }
 
     main section:nth-of-type(1) {
-        margin-bottom: 2rem !important;
+        margin-bottom: 0.5rem !important;
     }
 
     main section {
@@ -121,7 +138,7 @@
     }
 
     #logo img {
-        height: 2.5rem;
+        height: 3.5rem;
     }
 
     aside ul li {
