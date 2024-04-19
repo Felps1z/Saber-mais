@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600..700;1,600..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     font-family: 'Inter', sans-serif;
@@ -28,6 +28,17 @@ header {
     margin-right: 1.5rem;
     min-height: 16dvh;
     max-height: 16dvh;
+}
+
+.false-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 16dvh;
+    max-height: 16dvh;
+    width: 2rem;
+    background-color: var(--azul);
+    z-index: 1;
 }
 
 #logo img {
@@ -101,51 +112,7 @@ ul {
     background-color: #002340 !important;
 }
 
-/* MAIN */
-
-main {
-    display: grid;
-    grid-template-columns: 20% 40% 40%;
-    padding: 1.5rem;
-    min-height: 75dvh;
-    max-height: 75dvh;
-}
-
-main section {
-    margin-left: 1.5rem;
-    display: grid;
-}
-
-main section:nth-of-type(1) {
-    grid-template-rows: 10% 90%;
-    margin: 0 1.5rem;
-}
-
-main section:nth-of-type(2) {
-    grid-template-rows: 50% 50%;
-    margin: 0 0 0 1.5rem;
-}
-
-main section:nth-of-type(1) article {
-    background-color: gray;
-    width: 100%;
-    margin-top: 1rem;
-    border-radius: 15px;
-    position: relative;
-}
-
-.false-header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-height: 16dvh;
-    max-height: 16dvh;
-    width: 2rem;
-    background-color: var(--azul);
-    z-index: 1;
-}
-
-
+/* SIDEBAR */
 
 aside ul {
     display: grid;
@@ -181,7 +148,44 @@ aside ul li i {
     margin-right: 1rem;
 }
 
+/* MAIN */
 
+.btn-back{
+    height: 32px;
+    width: 32px;
+    margin-bottom: 1.5rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    padding: 1.5rem;
+    min-height: 84dvh;
+    max-height: 84dvh;
+}
+
+main section {
+    margin-left: 1.5rem;
+    display: grid;
+}
+
+main section:nth-of-type(1) {
+    grid-template-rows: 10% 90%;
+    margin: 0 1.5rem;
+}
+
+main section:nth-of-type(2) {
+    grid-template-rows: 50% 50%;
+    margin: 0 0 0 1.5rem;
+}
+
+main section:nth-of-type(1) article {
+    background-color: gray;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 15px;
+    position: relative;
+}
 
 #date-container,
 #events {
@@ -401,7 +405,6 @@ SECTIONS - LEGENDAS
 7 - ESTÁGIOS
 8 - MENSAGENS 
 9 - FAQS
-
 */
 
 main section:nth-of-type(3),
@@ -531,8 +534,6 @@ main section:nth-of-type(9) .answer {
     color: #7b7b7b;
     font-weight: 400;
 }
-
-
 
 /* FAQS - FOOTER */
 main section:nth-of-type(9) .footer {
