@@ -581,12 +581,3 @@ a:hover {
     background-color: var(--azul) !important;
 }
 
-/* NOTEBOOK */
-@media screen and (max-width: 1366px) {
-
-    .input-box input,
-    button {
-        padding: 1.2rem;
-    }
-
-}

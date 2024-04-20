@@ -51,7 +51,8 @@ function checked(event) {
                     btnBack.style.display = 'block';
                     this.hiddenElement(aside)
                 } else {
-                    return main.style.gridTemplateColumns = grid;
+                    btnBack.style.display = 'none';
+                    main.style.gridTemplateColumns = grid;
                 }
             },
 
@@ -78,7 +79,6 @@ function checked(event) {
                 this.hiddenElement(page6);
                 this.hiddenElement(page7);
                 this.hiddenElement(page8);
-                btnBack.style.display = 'block';
                 page2.style.display = 'flex';
             },
             btn3() {
@@ -90,7 +90,6 @@ function checked(event) {
                 this.hiddenElement(page5);
                 this.hiddenElement(page6);
                 this.hiddenElement(page8);
-                btnBack.style.display = 'block';
                 page3.style.display = 'flex';
             },
             btn4() {
@@ -103,7 +102,6 @@ function checked(event) {
                 this.hiddenElement(page6);
                 this.hiddenElement(page7);
                 this.hiddenElement(page8);
-                btnBack.style.display = 'block';
                 page4.style.display = 'flex';
             },
             btn5() {
@@ -116,7 +114,6 @@ function checked(event) {
                 this.hiddenElement(page6);
                 this.hiddenElement(page7);
                 this.hiddenElement(page8);
-                btnBack.style.display = 'block';
                 page5.style.display = 'flex';
             },
             btn6() {
@@ -129,7 +126,6 @@ function checked(event) {
                 this.hiddenElement(page5);
                 this.hiddenElement(page7);
                 this.hiddenElement(page8);
-                btnBack.style.display = 'block';
                 page6.style.display = 'flex';
             },
             btn7() {
@@ -142,7 +138,6 @@ function checked(event) {
                 this.hiddenElement(page6);
                 this.hiddenElement(page5);
                 this.hiddenElement(page8);
-                btnBack.style.display = 'block';
                 page7.style.display = 'flex';
             },
             btn8() {
@@ -155,7 +150,6 @@ function checked(event) {
                 this.hiddenElement(page6);
                 this.hiddenElement(page5);
                 this.hiddenElement(page7);
-                btnBack.style.display = 'block';
                 page8.style.display = 'flex';
             }
         }

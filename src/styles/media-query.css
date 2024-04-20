@@ -160,6 +160,25 @@
     #date-container {
         padding: 2rem 2rem 7rem 2rem;
     }
+
+    /* tela de perfil */
+    #main-p {
+        display: flex;
+        grid-template-columns: none;
+    }
+    
+    .left-container {
+        display: none;
+        justify-content: none;
+        align-items: none;
+        background-color: none;
+        height: 0vh;
+        position: relative;
+        flex-direction: none;
+    }
+    
+   
+    
 }
 
 
