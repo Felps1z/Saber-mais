@@ -117,7 +117,7 @@ ul {
 aside ul {
     display: grid;
     gap: 0;
-    min-height: 100%;
+    height: 100%;
 }
 
 aside ul li {
@@ -160,13 +160,13 @@ main {
     display: grid;
     grid-template-columns: 20% 40% 40%;
     padding: 1.5rem;
-    min-height: 84dvh;
-    max-height: 84dvh;
 }
 
 main section {
     margin-left: 1.5rem;
     display: grid;
+    max-height: 75.5dvh;
+    min-height: 75.5dvh;
 }
 
 main section:nth-of-type(1) {
@@ -181,10 +181,10 @@ main section:nth-of-type(2) {
 
 main section:nth-of-type(1) article {
     background-color: gray;
-    width: 100%;
     margin-top: 1rem;
     border-radius: 15px;
     position: relative;
+    height: auto;
 }
 
 #date-container,
@@ -386,10 +386,11 @@ main section:nth-of-type(1) article {
     display: flex;
     transition: 0.7s ease-in-out;
     transform: translateX(0);
+    height: 100%;
 }
 
 .slides img {
-    height: 50vh;
+    height: 100%;
     cursor: pointer;
 }
 
