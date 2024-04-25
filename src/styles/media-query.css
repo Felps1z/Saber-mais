@@ -72,20 +72,21 @@
         top: 0;
         left: 0;
     }
+
     .container-rec {
         height: 20rem;
         width: 22rem;
         border-radius: 10px;
         box-shadow: 0 10px 2px rgba(0, 0, 0, 0.1);
     }
-    
+
     .container-rec h2 {
         text-align: center;
         padding: 1.5rem;
         border-radius: 15px;
         font-size: 15px;
     }
-    
+
     .centralizar p {
         text-align: center;
         margin-left: 0.5rem;
@@ -94,10 +95,11 @@
         font-weight: 500;
         top: 0;
     }
-    
+
     .botao {
         margin-top: 0.5rem;
     }
+
     /* tela de cadastro */
 
     .titulo h2 {
@@ -110,10 +112,11 @@
         margin-top: 3rem;
         font-size: 15px;
     }
+
     .estilo-form {
         gap: 0.5rem;
     }
-    
+
     .radio-button-container {
         gap: 14px;
     }
@@ -166,7 +169,7 @@
         display: flex;
         grid-template-columns: none;
     }
-    
+
     .left-container {
         display: none;
         justify-content: none;
@@ -176,35 +179,60 @@
         position: relative;
         flex-direction: none;
     }
-    
-   
-    
+
+
+
 }
 
 
 /* PC */
 @media screen and (min-width: 1920px) {
-    main {
+    /* Página de Home */
+    header{
+        padding: 2rem 0 2rem 2rem;
+    }
+
+    #logo img{
+        height: 4rem;
+    }
+
+    #options{
+        padding: 1.5rem 7rem 1.5rem 2rem;
+       
+    }
+
+    #options a{
+        font-size: 1.25rem;
+    }
+
+    #icon-box{
+        
+    }
+    
+    #icon-box img{
+        height: 4rem;
+    }
+
+    #body-home main {
         padding: 2rem 2rem 3rem 2rem;
     }
 
-    main section:nth-of-type(1) {
+    #body-home main section:nth-of-type(1) {
         margin: 0 2rem;
     }
 
-    main section:nth-of-type(2) {
+    #body-home main section:nth-of-type(2) {
         margin: 0 0 0 2rem;
     }
 
     aside ul {
-        margin-right: 2rem;
-        gap: 1rem;
+        margin-right: 1rem;
     }
 
     aside ul li {
         padding: 0 0 0 32px;
         font-size: 1.5rem;
-        font-weight: 900;
+        
         border-radius: 25px;
     }
 
@@ -252,12 +280,21 @@
     }
 
     #date-container #hour {
-        justify-content: center;
+        justify-content: flex-end;
+        margin-right: 2.5rem;
     }
 
-    .warning {
+    #events .warning {
         justify-content: space-between;
+        padding: 1rem 2.5rem;
     }
 
+    /* Página de login */
+    .estilo-form {
+        max-width: 62rem;
+    }
 
+    #form, #container-image img, #container-form>a{
+        transform: scale(1.1);
+    }
 }

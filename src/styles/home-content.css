@@ -51,12 +51,9 @@ header {
     position: relative;
 }
 
-ul {
+#options {
     display: flex;
     gap: 1.5rem;
-}
-
-#options {
     padding: 1rem 6rem 1rem 2rem;
     background-color: var(--azul-claro);
     list-style: none;
@@ -290,8 +287,18 @@ main section:nth-of-type(1) article {
 
 #events .warning {
     display: flex;
+    flex-direction: column;
     padding: 1rem;
-    
+}
+
+#events .warning li{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+#events .warning hr{
+    border-color: rgba(202, 196, 208, 0.25);
 }
 
 #events .warning div{
@@ -391,6 +398,7 @@ main section:nth-of-type(1) article {
 
 .slides img {
     height: 100%;
+    width: auto;
     cursor: pointer;
 }
 
