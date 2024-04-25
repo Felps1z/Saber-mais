@@ -1,0 +1,13 @@
+{
+  "name": "saber-mais",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">   <img src=\"https://lh3.googleusercontent.com/pw/AP1GczPUaIzkXmhqAFwX4i-tTPOJVXpBfn-5YpFDQLQw1k6m5V8yS7Z9WHd4PnwmrKC1QiEmi8pDkbi3_LupfB9U722H9jTSFFBgDTdhNKUp8AJkSJ-9XwwpbP5-aK7_bZ5bBnqMbxEm1WSn6bHEKTZ6bEjN=w361-h192-s-no-gm?authuser=0\"> </p>",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
