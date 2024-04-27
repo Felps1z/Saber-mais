@@ -1,33 +1,40 @@
+// -> botao de voltar - mobile
 const btnBack = document.querySelector('.btn-back');
 
 btnBack.addEventListener('click', () => {
-
     function hiddenElement(element) {
         element.style.display = 'none';
     }
-
     function showElement(element) {
         element.style.display = 'inherit';
     }
 
-    //Mobile
+    //-> Verificando a largura do dispositivo e..?
     function verifyMobile(grid) {
-        if (window.innerWidth < 480) return this.hiddenElement(aside);
+        if (window.innerWidth < 480) return this.hiddenElement(aside); //
         if (window.innerWidth >= 480) return main.style.gridTemplateColumns = grid;
     }
-
+    //-> ABA PAINEL - lado esquerdo(slider) 
     const page1Section1 = document.querySelector('main section:nth-of-type(1)');
-    const page1Section2 = document.querySelector('main section:nth-of-type(2)');
+    //-> ABA PAINEL - lado direito(relogio e avisos)
+    const page1Section2 = document.querySelector('main section:nth-of-type(2)'); 
+    //-> ABA BOLETIM
     const page2 = document.querySelector('main section:nth-of-type(3)');
+    //-> ABA CALENDÁRIO
     const page3 = document.querySelector('main section:nth-of-type(4)');
+    //-> ABA DIÁRIO
     const page4 = document.querySelector('main section:nth-of-type(5)');
+    //-> ABA CURRICULO
     const page5 = document.querySelector('main section:nth-of-type(6)');
+    //-> ABA ESTÁGIO
     const page6 = document.querySelector('main section:nth-of-type(7)');
+    //-> ABA MENSAGEM
     const page7 = document.querySelector('main section:nth-of-type(8)');
+    //-> ABA FAQ
     const page8 = document.querySelector('main section:nth-of-type(9)');
+
     const main = document.querySelector('main');
-    
-    const aside = document.querySelector('aside')
+    const aside = document.querySelector('aside');
   
     btnBack.style.display = 'none' 
     showElement(aside)
@@ -41,13 +48,13 @@ btnBack.addEventListener('click', () => {
     hiddenElement(page7);
     hiddenElement(page8);  
 })
-
+// ?
 if (window.innerWidth < 480){
     const logo = document.querySelector('#logo img')
     logo.setAttribute('src', 'src/assets/icons/icone_logo.png')
 }
 
-// -> MENSAGEM DE BOM DIA
+//-> MENSAGEM DE BOM DIA
 const div = document.querySelector('#greetings');
 
 const date = new Date();
@@ -79,22 +86,21 @@ function toggleMenu() {
     }
 }
 
-// -> SLIDER (CARROSSEL)
+// -> SLIDER (CARROSSEL) <- //
 const box = document.querySelector('.slides');
 const images = document.querySelectorAll('.slides img');
-
 const image = document.querySelector('.slides img');
 let imageWidth;
 
+//-> Função para ?
 function reportWindowSize() {
-    imageWidth = image.width; //largura da imagem após redimensionamento
+    imageWidth = image.width; // largura da imagem após redimensionamento
 }
 
-window.onresize = reportWindowSize;
-
+window.onresize = reportWindowSize; // ?
 let count = 0;
 
-/*Rolagem automática*/
+//-> Rolagem automática - SLIDER
 function slider() {
     count++;
     if (count > images.length - 1) {
@@ -104,20 +110,19 @@ function slider() {
     box.style.transform = `translateX(${-count * imageWidth}px)`;
 }
 
-/*Botão Voltar*/
+//-> Botão de voltar - SLIDER 
 function sliderBack(){
     count--;
    
     box.style.transform = `translateX(${-count * imageWidth}px)`;
 }
 
-/*Botão Avançar*/
+//-> Botão de avançar - SLIDER
 function sliderAdvance(){
     count++
    
     box.style.transform = `translateX(${-count * imageWidth}px)`;
 }
-
 document.querySelector('.slider .icon-voltar').addEventListener('click', (event) => {
     if (count != 0){
         sliderBack();
@@ -125,7 +130,6 @@ document.querySelector('.slider .icon-voltar').addEventListener('click', (event)
     clearInterval(timer);
     timer = setInterval(slider, 3000);
 });
-
 document.querySelector('.slider .icon-avancar').addEventListener('click', (event) => {
     if (count != images.length - 1){
         sliderAdvance();
@@ -133,12 +137,11 @@ document.querySelector('.slider .icon-avancar').addEventListener('click', (event
     clearInterval(timer);
     timer = setInterval(slider, 3000);
 })
-
 let timer = setInterval(slider, 3000);
 
-// -> DATA E HORA <-
+// -> DATA E HORA <- //
 
-//Data
+//-> Data - dias da semana
 function weekDayLong(weekday) {
     if (weekday === 0) return 'Dom,';
     if (weekday === 1) return 'Seg,';
@@ -148,7 +151,7 @@ function weekDayLong(weekday) {
     if (weekday === 5) return 'Sex,';
     if (weekday === 6) return 'Sáb,';
 }
-
+//-> Data - meses
 function monthLong(month) {
     if (month === 0) return 'Janeiro';
     if (month === 1) return 'Fevereiro';
@@ -168,9 +171,9 @@ const weekDay = date.getDay();
 const monthDay = date.getDate();
 const month = date.getMonth();
 
-console.log(weekDayLong(weekDay))
-console.log(monthDay)
-console.log(monthLong(month))
+// console.log(weekDayLong(weekDay))
+// console.log(monthDay)
+// console.log(monthLong(month))
 
 const dateContainer = document.getElementById('date');
 const hourContainer = document.getElementById('hour');
@@ -185,7 +188,7 @@ dateContainer.appendChild(addSpan(weekDayLong(weekDay)));
 dateContainer.appendChild(addSpan(monthDay));
 dateContainer.appendChild(addSpan(monthLong(month)));
 
-//Hora
+//-> Hora
 const arrowHour = document.getElementById('arrow-hour');
 const arrowMinute = document.getElementById('arrow-minute');
 const arrowSecond = document.getElementById('arrow-second');
@@ -208,13 +211,13 @@ setInterval(() => {
 
 getTime();
 
-// -> ACESSIBILIDADE <-
+// -> ACESSIBILIDADE <- //
 
 const sidebarButton = document.querySelectorAll('aside ul li');
 for (let i in sidebarButton) {
     sidebarButton[i].setAttribute('tabindex', '0')
 }
-/* -> RECUPERAR CONTA <- */
+// -> RECUPERAR CONTA <- //
 function alert() {
     const emailRec = document.querySelector('#email_recup')
     if (emailRec.value != '') {
