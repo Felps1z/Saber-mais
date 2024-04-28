@@ -11,32 +11,3 @@ buttonQuestion.forEach(function(selectedButton,i) {
         minusIcon2Question[i].classList.toggle('rotateHorizontal');
     });
 });
-
-
-// buttonQuestion[0].addEventListener('click', function (event) {
-//     answerQuestion[0].classList.toggle('openQuestion');
-//     titleQuestion[0].classList.toggle('openQuestionTitle');
-//     minusIcon2Question[0].classList.toggle('openQuestionTitle');
-//     minusIcon2Question[0].classList.toggle('rotateHorizontal');
-// });
-
-// buttonQuestion[1].addEventListener('click', function (event) {
-//     answerQuestion[1].classList.toggle('openQuestion');
-//     titleQuestion[1].classList.toggle('openQuestionTitle');
-//     minusIcon2Question[1].classList.toggle('openQuestionTitle');
-//     minusIcon2Question[1].classList.toggle('rotateHorizontal');
-// });
-
-// buttonQuestion[2].addEventListener('click', function (event) {
-//     answerQuestion[2].classList.toggle('openQuestion');
-//     titleQuestion[2].classList.toggle('openQuestionTitle');
-//     minusIcon2Question[2].classList.toggle('openQuestionTitle');
-//     minusIcon2Question[2].classList.toggle('rotateHorizontal');
-// });
-
-// buttonQuestion[3].addEventListener('click', function (event) {
-//     answerQuestion[3].classList.toggle('openQuestion');
-//     titleQuestion[3].classList.toggle('openQuestionTitle');
-//     minusIcon2Question[3].classList.toggle('openQuestionTitle');
-//     minusIcon2Question[3].classList.toggle('rotateHorizontal');
-// });

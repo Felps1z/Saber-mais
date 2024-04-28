@@ -1,6 +1,5 @@
 // -> botao de voltar - mobile
 const btnBack = document.querySelector('.btn-back');
-
 btnBack.addEventListener('click', () => {
     function hiddenElement(element) {
         element.style.display = 'none';
@@ -9,15 +8,16 @@ btnBack.addEventListener('click', () => {
         element.style.display = 'inherit';
     }
 
-    //-> Verificando a largura do dispositivo e..?
-    function verifyMobile(grid) {
-        if (window.innerWidth < 480) return this.hiddenElement(aside); //
-        if (window.innerWidth >= 480) return main.style.gridTemplateColumns = grid;
-    }
+    //-> FUNÇÃO SEM USO
+    // function verifyMobile(grid) {
+    //     if (window.innerWidth <= 700) return this.hiddenElement(aside);
+    //     if (window.innerWidth > 700) return main.style.gridTemplateColumns = grid;
+    // }
+
     //-> ABA PAINEL - lado esquerdo(slider) 
     const page1Section1 = document.querySelector('main section:nth-of-type(1)');
     //-> ABA PAINEL - lado direito(relogio e avisos)
-    const page1Section2 = document.querySelector('main section:nth-of-type(2)'); 
+    const page1Section2 = document.querySelector('main section:nth-of-type(2)');
     //-> ABA BOLETIM
     const page2 = document.querySelector('main section:nth-of-type(3)');
     //-> ABA CALENDÁRIO
@@ -35,8 +35,8 @@ btnBack.addEventListener('click', () => {
 
     const main = document.querySelector('main');
     const aside = document.querySelector('aside');
-  
-    btnBack.style.display = 'none' 
+
+    btnBack.style.display = 'none'
     showElement(aside)
     hiddenElement(page1Section1);
     hiddenElement(page1Section2);
@@ -46,10 +46,10 @@ btnBack.addEventListener('click', () => {
     hiddenElement(page5);
     hiddenElement(page6);
     hiddenElement(page7);
-    hiddenElement(page8);  
+    hiddenElement(page8);
 })
-// ?
-if (window.innerWidth < 480){
+//-> Mudando logo da tela HOME em MOBILE
+if (window.innerWidth <= 700) {
     const logo = document.querySelector('#logo img')
     logo.setAttribute('src', 'src/assets/icons/icone_logo.png')
 }
@@ -67,12 +67,12 @@ function message(hour) {
 }
 
 const nome = localStorage.getItem('nome');
-const partesNome = nome.split(" "); 
-const primeiroNome = partesNome[0] 
+const partesNome = nome.split(" ");
+const primeiroNome = partesNome[0]
 div.innerHTML = message(hour);
 div.innerHTML += `, ${primeiroNome}`;
 
-// -> ABRIR MENU DO PERFIL
+//-> ABRIR MENU DO PERFIL
 function toggleMenu() {
     const options = document.querySelector('#options');
     options.classList.toggle('menuTranslateX');
@@ -86,13 +86,13 @@ function toggleMenu() {
     }
 }
 
-// -> SLIDER (CARROSSEL) <- //
+//-> SLIDER (CARROSSEL) <- //
 const box = document.querySelector('.slides');
 const images = document.querySelectorAll('.slides img');
 const image = document.querySelector('.slides img');
 let imageWidth;
 
-//-> Função para ?
+
 function reportWindowSize() {
     imageWidth = image.width; // largura da imagem após redimensionamento
 }
@@ -111,27 +111,27 @@ function slider() {
 }
 
 //-> Botão de voltar - SLIDER 
-function sliderBack(){
+function sliderBack() {
     count--;
-   
+
     box.style.transform = `translateX(${-count * imageWidth}px)`;
 }
 
 //-> Botão de avançar - SLIDER
-function sliderAdvance(){
+function sliderAdvance() {
     count++
-   
+
     box.style.transform = `translateX(${-count * imageWidth}px)`;
 }
 document.querySelector('.slider .icon-voltar').addEventListener('click', (event) => {
-    if (count != 0){
+    if (count != 0) {
         sliderBack();
     }
     clearInterval(timer);
     timer = setInterval(slider, 3000);
 });
 document.querySelector('.slider .icon-avancar').addEventListener('click', (event) => {
-    if (count != images.length - 1){
+    if (count != images.length - 1) {
         sliderAdvance();
     }
     clearInterval(timer);
@@ -196,9 +196,9 @@ const arrowSecond = document.getElementById('arrow-second');
 function getTime() {
     const time = new Date();
 
-    const getHourRotation = (360/12) * time.getHours();
-    const getMinuteRotation = (360/60) * time.getMinutes();
-    const getSecondRotation = (360/60) * time.getSeconds();
+    const getHourRotation = (360 / 12) * time.getHours();
+    const getMinuteRotation = (360 / 60) * time.getMinutes();
+    const getSecondRotation = (360 / 60) * time.getSeconds();
 
     arrowHour.style.transform = `rotate(${getHourRotation}deg)`;
     arrowMinute.style.transform = `rotate(${getMinuteRotation}deg)`;

@@ -1,5 +1,5 @@
 /* Celulares */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     /* index */
 
     #body-home{
@@ -179,7 +179,7 @@
         align-items: center;
         position: relative;
     }
-    #greetings{margin-top: -1rem;}
+    /* #greetings{margin-top: -1rem;} */
 
     /* tela de perfil */
     #main-p {
