@@ -47,7 +47,7 @@ function checked(event) {
 
             //-> Exibição de sections de acordo com resolução de dispositivo
             verifyMobile(grid) {
-                if (window.innerWidth <= 700) {
+                if (window.innerWidth <= 900) {
                     btnBack.style.display = 'block';
                     this.hiddenElement(aside)
                 } else {

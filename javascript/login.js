@@ -12,7 +12,7 @@ formLogin.addEventListener('submit', (event) => {
     const inputSenha = document.getElementById('senha').value;
 
     if (verifyLogin(inputMatricula, inputSenha)){
-        window.location.href = 'home.html';
+        window.location.href = '../html/home.html';
     } else {
         Swal.fire({
             title: 'Erro!',
