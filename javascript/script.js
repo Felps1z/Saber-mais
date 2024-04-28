@@ -51,7 +51,7 @@ btnBack.addEventListener('click', () => {
 //-> Mudando logo da tela HOME em MOBILE
 if (window.innerWidth <= 700) {
     const logo = document.querySelector('#logo img')
-    logo.setAttribute('src', 'src/assets/icons/icone_logo.png')
+    logo.setAttribute('src', '../src/assets/icons/icone_logo.png')
 }
 
 //-> MENSAGEM DE CUMPRIMENTO
@@ -171,9 +171,9 @@ const weekDay = date.getDay();
 const monthDay = date.getDate();
 const month = date.getMonth();
 
-// console.log(weekDayLong(weekDay))
-// console.log(monthDay)
-// console.log(monthLong(month))
+ console.log(weekDayLong(weekDay))
+ console.log(monthDay)
+ console.log(monthLong(month))
 
 const dateContainer = document.getElementById('date');
 const hourContainer = document.getElementById('hour');

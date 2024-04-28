@@ -37,7 +37,7 @@ formCadastro.addEventListener('submit', (event) => {
             confirmButtonText: 'Ok!'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = 'index.html';
+                window.location.href = '../index.html';
             }
         });
     }
