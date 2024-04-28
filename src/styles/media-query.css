@@ -1,5 +1,5 @@
 /* Celulares */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     /* index */
 
     #body-home{
@@ -10,7 +10,7 @@
         display: block;
         grid-template-columns: none;
         height: 100vh;
-        background: linear-gradient(323deg, rgba(0, 40, 72, 1) 16%, rgba(0, 51, 93, 1) 45%, rgba(0, 71, 130, 1) 57%, rgba(1, 91, 165, 1) 100%);
+        background: linear-gradient(323deg, rgb(72, 23, 0) 16%, rgba(0, 51, 93, 1) 45%, rgba(0, 71, 130, 1) 57%, rgba(1, 91, 165, 1) 100%);
         position: relative;
     }
 
@@ -179,7 +179,7 @@
         align-items: center;
         position: relative;
     }
-    #greetings{margin-top: -1rem;}
+    /* #greetings{margin-top: -1rem;} */
 
     /* tela de perfil */
     #main-p {

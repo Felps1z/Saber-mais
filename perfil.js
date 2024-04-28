@@ -1,8 +1,5 @@
-
-
-    
-    let textAdd = document.querySelector('.addImg');
-    let imageUser = document.querySelector('#img-user');
+let textAdd = document.querySelector('.addImg');
+let imageUser = document.querySelector('#img-user');
 
     function showOption() {
         imageUser.classList.toggle('hovered');
@@ -32,7 +29,7 @@
             reader.addEventListener("load", function (e) {
                 const readerTarget = e.target;
 
-                imageUser.src = readerTarget.result; /**/
+                imageUser.src = readerTarget.result; 
                 imageUser.classList.add("picture-img");
                 
                 pictureImage.appendChild(img);

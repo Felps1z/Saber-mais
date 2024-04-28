@@ -3,7 +3,7 @@ function checked(event) {
     let liElements = document.querySelectorAll('ul li');
     let iElements = document.querySelectorAll('ul li i');
 
-    // Resetar todas as li para background branco e cor do texto azul
+    //Resetar todas as li para background branco e cor do texto azul
     liElements.forEach(function (li) {
         li.style.background = 'transparent';
         li.style.color = '#003C74';
@@ -45,9 +45,9 @@ function checked(event) {
                 element.style.display = 'inherit';
             },
 
-            //Mobile
+            //-> Exibição de sections de acordo com resolução de dispositivo
             verifyMobile(grid) {
-                if (window.innerWidth < 480) {
+                if (window.innerWidth <= 700) {
                     btnBack.style.display = 'block';
                     this.hiddenElement(aside)
                 } else {
@@ -56,7 +56,7 @@ function checked(event) {
                 }
             },
 
-            //Buttons
+            //->Buttons
             btn1() {
                 this.verifyMobile('20% 40% 40%');
                 this.showElement(page1Section1);
