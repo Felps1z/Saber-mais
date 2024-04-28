@@ -373,18 +373,18 @@ a:hover {
     flex-direction: column;
 }
 
-#arrow-p {
+.arrow-p {
     position: absolute;
     left: 0;
     top: 0;
     margin: 1rem 0 0 1rem;
 }
 
-#arrow-p i {
+.arrow-p i {
     font-size: 32px;
 }
 
-#arrow-p i:hover {
+.arrow-p i:hover {
     color: rgb(204, 204, 204) !important;
 }
 
@@ -527,7 +527,6 @@ a:hover {
     display: flex;
     align-items: center;
     background-color: #00234085;
-
 }
 
 #alterarDados {
@@ -564,15 +563,10 @@ a:hover {
     color: rgb(204, 204, 204) ;
 }
 
-.dadosBox:nth-child(3) .tooltip {
-    margin-left: 17.2rem;
-    cursor: default;
+.dadosBox:nth-child(4) .tooltip {
+    cursor: no-drop;
 }
 
- .dadosBox:nth-child(6) .tooltip {
-    margin-left: 17.2rem;
-    cursor: pointer;
-} 
 
 
 /* Bootstrap */

@@ -1,3 +1,6 @@
+
+
+    
     let textAdd = document.querySelector('.addImg');
     let imageUser = document.querySelector('#img-user');
 

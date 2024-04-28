@@ -5,25 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil - Saber+</title>
+
+    <link rel="shortcut icon" href="./src/assets/icons/icone_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="src/styles/vars.css">
     <link rel="stylesheet" href="./src/styles/styles.css">
     <link rel="stylesheet" href="./src/styles/media-query.css">
-    <!-- Biblioteca de icones do Font Awesome -->
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="./src/assets/icons/icone_logo.png" type="image/x-icon">
-    <style>
-
-    </style>
 </head>
 
 
 <body>
     <main id="main-p">
         <div class="left-container">
-            <div id="arrow-p" >
+            <div class="arrow-p" >
                 <a href="home.html" title="Voltar">
                     <i class="fa-solid fa-circle-left" style="color: #ffffff;"></i>
                 </a>
@@ -47,6 +46,12 @@
             </div>
         </div>
         <div class="right-container">
+            <div class="arrow-p" style="display: none">
+                <a href="home.html" title="Voltar">
+                    <i class="fa-solid fa-circle-left" style="color: #ffffff;"></i>
+                </a>
+            </div>
+
             <div class="title-box">
                 <h1>DADOS PESSOAIS</h1>
             </div>
@@ -73,8 +78,8 @@
                     <div class="textBox">
                         <p id="matricula">
                         </p>
-                        <p class="tooltip" onclick="editarMat()">Editar</p>
                     </div>
+                    <p class="tooltip" onclick="editarMat()">Editar</p>
                 </div>
             </div>
             <div class="dadosBox">
@@ -112,8 +117,8 @@
                     <div class="textBox">
                         <p id="senha">
                         </p>
-                        <p class="tooltip" onclick="editarSenha()">Editar</p>
                     </div>
+                    <p class="tooltip" onclick="editarSenha()">Editar</p>
                 </div>
             </div>
 

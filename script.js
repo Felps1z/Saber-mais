@@ -54,7 +54,7 @@ if (window.innerWidth < 480){
     logo.setAttribute('src', 'src/assets/icons/icone_logo.png')
 }
 
-//-> MENSAGEM DE BOM DIA
+//-> MENSAGEM DE CUMPRIMENTO
 const div = document.querySelector('#greetings');
 
 const date = new Date();

@@ -7,8 +7,8 @@ const port = 3000;
 server.use(express.static(path.join(__dirname)));
 
 server.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
+  res.sendFile(path.join(__dirname,  "index.html"));
+})
 
 server.listen(port, () => {
   console.log("Server is running");
