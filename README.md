@@ -4,7 +4,20 @@
 
 # Bem-vindo ao repositório do Saber+ Acadêmico
 
+<p width="30%">Software de sistema de gestão acadêmica criado por mim e por Lethicia Almeida, utilizando HTML, CSS, JS, NodeJS, Bootstrap.</p>
+<br>
 
-
-<p width="30%">Software de sistema de gestão acadêmica criado por mim e por Lethicia Almeida, utilizando HTML, CSS, JS, NodeJS, Bootstrap.
-</p>
+<table>
+  <tr>
+    <th>PC</th>
+    <th>Mobile</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://cdn.discordapp.com/attachments/1231021678382022659/1235962681488445543/Saber_pc.png?ex=66364772&is=6634f5f2&hm=89442538ad1fd47eee350123664809e2143937869add9329c50abd2074bd1442&" style="height: 200px">
+    </td>
+    <td>
+      <img src="https://cdn.discordapp.com/attachments/1231021678382022659/1235963141259788391/saber_celular.png?ex=663647df&is=6634f65f&hm=3baf59f45fc471b64553fc26478093236722237017a5289e26ec1feb0653f317&" style="height: 200px">
+    </td>
+  </tr>
+</table>
