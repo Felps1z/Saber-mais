@@ -4,7 +4,7 @@
 
 # Bem-vindo ao repositório do Saber+ Acadêmico
 
-<p width="30%">Software de sistema de gestão acadêmica criado por mim e por Lethicia Almeida, utilizando HTML, CSS, JS, NodeJS, Bootstrap.</p>
+<p width="30%">Software de sistema de gestão acadêmica, criado utilizando HTML, CSS, JS, NodeJS, Bootstrap.</p>
 <br>
 
 <table>
