@@ -1,3 +1,17 @@
+// Loader
+
+const fade = () => {
+    const wrapper = 
+    document.querySelector('.wrapper');
+    setTimeout(() => {
+        wrapper.classList.add('fade');
+    }, 250)
+};
+
+window.addEventListener('load', fade)
+
+//Fim Loader
+
 const formLogin = document.getElementById('form');
 
 function verifyLogin(matricula, senha) {

@@ -1,5 +1,18 @@
+// Loader
+
+const fade = () => {
+    const wrapper = 
+    document.querySelector('.wrapper');
+    setTimeout(() => {
+        wrapper.classList.add('fade');
+    }, 250)
+};
+
+window.addEventListener('load', fade)
+
 // -> botao de voltar - mobile
 const btnBack = document.querySelector('.btn-back');
+
 btnBack.addEventListener('click', () => {
     function hiddenElement(element) {
         element.style.display = 'none';
@@ -7,12 +20,6 @@ btnBack.addEventListener('click', () => {
     function showElement(element) {
         element.style.display = 'inherit';
     }
-
-    //-> FUNÇÃO SEM USO
-    // function verifyMobile(grid) {
-    //     if (window.innerWidth <= 700) return this.hiddenElement(aside);
-    //     if (window.innerWidth > 700) return main.style.gridTemplateColumns = grid;
-    // }
 
     //-> ABA PAINEL - lado esquerdo(slider) 
     const page1Section1 = document.querySelector('main section:nth-of-type(1)');
@@ -97,22 +104,24 @@ function reportWindowSize() {
     imageWidth = image.width; // largura da imagem após redimensionamento
 }
 
-window.onresize = reportWindowSize; // ?
-let count = 0;
+window.onresize = reportWindowSize; // só executa reportWindowSize() quando a página recarregar
 
+let count = 0;
 //-> Rolagem automática - SLIDER
 function slider() {
     count++;
     if (count > images.length - 1) {
         count = 0;
     }
-
+    reportWindowSize(); // atualiza a largura da imagem
+    
     box.style.transform = `translateX(${-count * imageWidth}px)`;
 }
 
 //-> Botão de voltar - SLIDER 
 function sliderBack() {
     count--;
+    reportWindowSize();
 
     box.style.transform = `translateX(${-count * imageWidth}px)`;
 }
@@ -120,6 +129,7 @@ function sliderBack() {
 //-> Botão de avançar - SLIDER
 function sliderAdvance() {
     count++
+    reportWindowSize();
 
     box.style.transform = `translateX(${-count * imageWidth}px)`;
 }

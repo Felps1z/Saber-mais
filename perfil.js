@@ -1,3 +1,17 @@
+// Loader
+
+const fade = () => {
+    const wrapper = 
+    document.querySelector('.wrapper');
+    setTimeout(() => {
+        wrapper.classList.add('fade');
+    }, 250)
+};
+
+window.addEventListener('load', fade)
+
+//Fim Loader
+
 let textAdd = document.querySelector('.addImg');
 let imageUser = document.querySelector('#img-user');
 
