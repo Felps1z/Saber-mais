@@ -49,15 +49,24 @@
         border-radius: 5px;
         height: 100%;
     }
+
     .btn {
         font-size: 12px;
         padding: 0.8rem;
         width: 15rem;
     }
-    .input-box input 
-    {
+
+    .input-box input{
         padding: 0.8rem;
         width: 15rem;
+    }
+
+    #body-perfil button{
+        width: 100%;
+    } 
+
+    #body-perfil input:-webkit-autofill{
+        -webkit-text-fill-color: black;
     }
 
     .arrow-p{

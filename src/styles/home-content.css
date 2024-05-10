@@ -16,7 +16,7 @@ body {
     color: #FFFFFF;
 }
 
-/* Loader */
+/* LOADER */
 
 .wrapper{
     position: fixed;
@@ -71,7 +71,7 @@ circle {
  }
 }
 
-/* Fim Loader */
+/* FIM LOADER */
 
 /* HEADER */
 
@@ -166,6 +166,8 @@ header {
     background-color: #002340 !important;
 }
 
+/* FIM HEADER */
+
 /* SIDEBAR */
 
 aside ul {
@@ -201,6 +203,8 @@ aside ul li:first-child {
 aside ul li i {
     margin-right: 1rem;
 }
+
+/* FIM SIDEBAR */
 
 /* MAIN */
 
@@ -264,7 +268,6 @@ main section:nth-of-type(1) article {
     font-size: 2rem;
 }
 
-
 #date-container #date span:nth-child(2) {
     font-size: 5rem;
     font-weight: 900;
@@ -276,6 +279,7 @@ main section:nth-of-type(1) article {
     justify-content: flex-end;
     align-items: center;
 }
+
 #date-container #hour #clock{
     background-color: rgba(0, 60, 116, 0.1);
     padding: 5rem;
@@ -375,10 +379,10 @@ main section:nth-of-type(1) article {
     padding: 4px 4px 0 0;
     cursor: pointer;
 }
+
 #events .warning i:hover{
     color: #026ED2 !important;
 }
-
 
 #events #events__title h2 {
     font-size: 1.5rem;
@@ -415,7 +419,8 @@ main section:nth-of-type(1) article {
     padding-bottom: 4px;
 }
 
-/*** SLIDES ***/
+/* Carrossel */
+
 .slider {
     overflow: hidden;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -435,16 +440,17 @@ main section:nth-of-type(1) article {
 
 .slider .icon-voltar{
     left: 20px;
+    background: transparent;
 }
 
 .slider .icon-avancar{ 
     right: 20px;
+    background: transparent;
 }
 
 .slider .icon-avancar i:hover, .slider .icon-voltar i:hover{
     transform: scale(1.1);
 }
-
 
 .slides {
     display: flex;
@@ -459,11 +465,11 @@ main section:nth-of-type(1) article {
     cursor: pointer;
 }
 
-/* Botões SIDEBAR */
+/* Troca de páginas */
 
-/* 
-SECTIONS - LEGENDAS
-2 - PAINEL
+/*
+Sections
+1/2 - PAINEL
 3 - BOLETIM
 4 - CALENDARIO
 5 - DIARIO
@@ -529,7 +535,8 @@ main section:nth-of-type(5) p:nth-of-type(1) {
     margin: 1rem 0rem;
 }
 
-/* FAQS */
+/* Faqs */
+
 main section:nth-of-type(9) {
     color: black;
     font-weight: 500;
@@ -557,7 +564,6 @@ main section:nth-of-type(9) .boxQuestion {
     border-radius: 8px;
     margin: 0.2rem;
     position: relative;
-
 }
 
 main section:nth-of-type(9) .boxQuestion .titleBox {
@@ -601,7 +607,7 @@ main section:nth-of-type(9) .answer {
     font-weight: 400;
 }
 
-/* FAQS - FOOTER */
+/* Faqs - Footer */
 main section:nth-of-type(9) .footer {
     margin-top: 1rem;
     text-align: center;
@@ -617,3 +623,5 @@ main section:nth-of-type(9) .footer p {
     line-height: 1.5rem;
     font-weight: 400;
 }
+
+/* FIM MAIN */
